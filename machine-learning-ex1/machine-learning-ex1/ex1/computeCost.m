@@ -8,6 +8,17 @@ m = length(y); % number of training examples
 
 % You need to return the following variables correctly 
 J = 0;
+  
+for i = 1:rows(X),
+  x = X(i,2);
+  h = theta(1)+theta(2)*x;
+  yi = y(i);
+  J+= (h-yi)**2;
+endfor
+
+J = J/(2*m);
+return;
+
 
 % ====================== YOUR CODE HERE ======================
 % Instructions: Compute the cost of a particular choice of theta
